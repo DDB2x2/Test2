@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pick a date 💘</title>
+
+  <style>
+    :root {
+      --bg1: #ffd6e7;
+      --bg2: #ffeef6;
+      --card: #ffffffcc;
+      --yes: #ff3b7a;
+      --yesHover: #ff1f68;
+      --border: #e5e7eb;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+    }
+
+    .card {
+      width: min(720px, 92vw);
+      padding: 26px 22px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(0,0,0,.15);
+    }
+
+    .art {
+      font-size: 96px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(26px, 4vw, 44px);
+      margin-bottom: 24px;
+    }
+
+    /* DATE OPTIONS */
+    .options {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .option {
+      border: 2px solid var(--border);
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s ease;
+      background: white;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + .option {
+      background: var(--yes);
+      color: white;
+      border-color: var(--yes);
+      transform: scale(1.03);
+    }
+
+    /* CONFIRM BUTTON */
+    .confirm-btn {
+      background: var(--yes);
+      color: white;
+      border: none;
+      padding: 16px 28px;
+      font-size: 18px;
+      font-weight: 800;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+    }
+
+    .confirm-btn:hover {
+      background: var(--yesHover);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="art">💘</div>
+
+    <h1>When are you free?</h1>
+
+    <form class="options">
+      <label>
+        <input type="radio" name="date" />
+        <div class="option">Friday night ✨</div>
+      </label>
+
+      <label>
+        <input type="radio" name="date" />
+        <div class="option">Saturday afternoon ☀️</div>
+      </label>
+    </form>
+
+    <button class="confirm-btn">Confirm</button>
+  </main>
+</body>
+</html>
