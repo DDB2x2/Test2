@@ -60,13 +60,6 @@
     <h1>See you soon <br> 
     -D x </h1>
 
-    <div class="countdown">
-      Countdown to Thursday 19-Feb
-      <div class="days" id="daysLeft">—</div>
-      <div class="date-label" id="chosenDate"></div>
-    </div>
-  </main>
-
   <script>
     /* ---------- SHOW SELECTED DATE ---------- */
     const chosenDateEl = document.getElementById("chosenDate");
@@ -76,20 +69,6 @@
       chosenDateEl.textContent = `You chose: ${storedDate}`;
     }
 
-    /* ---------- COUNTDOWN ---------- */
-    const daysLeftEl = document.getElementById("daysLeft");
-
-    const targetDate = new Date("February 19, 2026 00:00:00");
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
-
-      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-      daysLeftEl.textContent = `${days} days`;
-    }
-
-    updateCountdown();
   </script>
 </body>
 </html>
