@@ -51,6 +51,30 @@
       margin-top: 8px;
       opacity: 0.7;
     }
+
+    .primary-btn {
+  margin-top: 32px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff5fa2, #ff8cc6);
+  color: white;
+  box-shadow: 0 12px 30px rgba(255,95,162,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(255,95,162,0.45);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
   </style>
 </head>
 
@@ -63,22 +87,13 @@
   P.S…
   </button>
 
-  <script>
-    /* ---------- SHOW SELECTED DATE ---------- */
-    const chosenDateEl = document.getElementById("chosenDate");
-    const storedDate = localStorage.getItem("selectedDate");
+ <script>
+  const psBtn = document.getElementById("psBtn");
 
-    if (storedDate) {
-      chosenDateEl.textContent = `You chose: ${storedDate}`;
-    }
-    
-    const psBtn = document.getElementById("psBtn");
+  psBtn.addEventListener("click", () => {
+    window.location.href = "countdown.html";
+  });
+</script>
 
-  if (psBtn) {
-    psBtn.addEventListener("click", () => {
-      window.location.href = "countdown.html";
-    });
-  }
-  </script>
 </body>
 </html>
