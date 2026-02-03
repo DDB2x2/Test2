@@ -59,6 +59,9 @@
     <div class="emoji">💋</div>
     <h1>See you soon <br> 
     -D x </h1>
+   <button id="psBtn" class="primary-btn" style="margin-top: 32px;">
+  P.S…
+  </button>
 
   <script>
     /* ---------- SHOW SELECTED DATE ---------- */
@@ -68,7 +71,14 @@
     if (storedDate) {
       chosenDateEl.textContent = `You chose: ${storedDate}`;
     }
+    
+    const psBtn = document.getElementById("psBtn");
 
+  if (psBtn) {
+    psBtn.addEventListener("click", () => {
+      window.location.href = "countdown.html";
+    });
+  }
   </script>
 </body>
 </html>
