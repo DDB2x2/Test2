@@ -39,15 +39,24 @@
     }
 
     h1 {
-      font-size: clamp(26px, 4vw, 44px);
-      margin-bottom: 20px;
-    }
+  font-size: 28px;
+  font-weight: 600;
+  margin: 20px 0 0;
+  line-height: 1.3;
+}
 
-    .countdown {
-      font-size: clamp(22px, 3.5vw, 32px);
-      font-weight: 700;
-      color: var(--yes);
-    }
+.countdown {
+  margin-top: 28px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.days {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 6px;
+}
     
     .hint {
       margin-top: 10px;
@@ -95,8 +104,7 @@
       );
 
       countdownEl.textContent =
-        `Thursday 19-Feb — ${days} days, ${hours} hours, ${minutes} minutes 💕
-        (but who's counting?)`;
+        `Thursday 19-Feb — ${days} days, ${hours} hours, ${minutes} minutes`;
     }
 
     updateCountdown();
