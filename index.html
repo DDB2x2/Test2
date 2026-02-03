@@ -134,9 +134,9 @@
 
   <main class="card">
     <!-- ANIMAL WITH HEART -->
-     <div class="art" style="font-size: 96px;">
+    <div class="art" style="font-size: 96px;">
   	💘
-     </div>
+	</div>
       <defs>
         <linearGradient id="fur" x1="0" x2="1">
           <stop offset="0" stop-color="#f7c7a1"/>
@@ -173,8 +173,8 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Titouan, 
-	will you be my valentine?</h1>
+    <h1>Titouan,<br>
+	Will you be my valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -298,12 +298,22 @@
       result.style.display = "block";
       resizeConfettiCanvas();
       fullScreenConfetti();
-    });
+
+    /* ---------- NEXT CLICK ---------- */
+    <div style="margin-top: 20px;">
+     <button id="nextBtn" class="primary-btn">Next</button>
+     </div>
+     });
+
+    /* ---------- NEW PAGE NAVIGATION ---------- */
+    const nextBtn = document.getElementById("nextBtn");
+
+    nextBtn.addEventListener("click", () => {
+    window.location.href = "dates.html";
+    });  
   </script>
 </body>
 </html>
-
-
 
 
 
