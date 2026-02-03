@@ -48,6 +48,13 @@
       font-weight: 700;
       color: var(--yes);
     }
+    
+    .hint {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: .7;
+    }
+
   </style>
 </head>
 
@@ -60,6 +67,10 @@
     <div class="countdown" id="countdown">
       Counting down to Thursday 19-Feb 💕
     </div>
+    
+    <!-- HINT -->
+    <div class="hint" id="hint">...but who's counting </div>
+
   </main>
 
   <script>
@@ -84,13 +95,15 @@
       );
 
       countdownEl.textContent =
-        `Thursday 19-Feb — <br>
-        ${days} days, ${hours} hours, ${minutes} minutes 💕 <br>
+        `Thursday 19-Feb — ${days} days, ${hours} hours, ${minutes} minutes 💕
         (but who's counting?)`;
     }
 
     updateCountdown();
     setInterval(updateCountdown, 60000);
+
+     const hint = document.getElementById("hint");
+    
   </script>
 </body>
 </html>
