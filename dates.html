@@ -136,9 +136,6 @@ confirmBtn.addEventListener("click", async () => {
 
   const chosenDate = selectedDate.dataset.date;
 
-  // Save locally
-  localStorage.setItem("selectedDate", chosenDate);
-
   // Send to GitHub (Option C)
   await sendDateToGitHub(chosenDate);
 
