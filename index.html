@@ -134,7 +134,9 @@
 
   <main class="card">
     <!-- ANIMAL WITH HEART -->
-    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+    <div class="art" style="font-size: 96px;">
+  	💘
+	</div>
       <defs>
         <linearGradient id="fur" x1="0" x2="1">
           <stop offset="0" stop-color="#f7c7a1"/>
@@ -171,7 +173,8 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Titouan, will you be my valentine?</h1>
+    <h1>Titouan, 
+	will you be my valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -184,7 +187,7 @@
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
       <img
-        class="fireworks"      	src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnIwMmpncTFjdmphMmhpcTBoa3NrOGdlZGZuNzBlajEyOTRwbTR3NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Naz61B60A2e6A/giphy.gif"
+        class="fireworks"      	src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFhc2lhZTA1eGhiemV0OG5nNnBuc2tkMXBrN2RmanhnM2M4Y2d5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l396USCocKAGZ7vSo/giphy.gif"
         alt="Fireworks"
       />
     </section>
@@ -295,7 +298,22 @@
       result.style.display = "block";
       resizeConfettiCanvas();
       fullScreenConfetti();
+
+    /* ---------- NEXT CLICK ---------- */
+    <div style="margin-top: 20px;">
+     <button id="nextBtn" class="primary-btn">Next</button>
+     </div>
+     });
+
+    /* ---------- NEW PAGE NAVIGATION ---------- */
+    const nextBtn = document.getElementById("nextBtn");
+
+    nextBtn.addEventListener("click", () => {
+    window.location.href = "dates.html";
     });
+
+
+   
   </script>
 </body>
 </html>
