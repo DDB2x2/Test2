@@ -126,6 +126,23 @@
       from { transform: scale(.96); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+	  /* NEW BUTTON (NEXT) */
+  .primary-btn {
+  position: static;          /* IMPORTANT */
+  background: var(--yes);
+  color: #fff;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.14);
+}
+
+.primary-btn:hover {
+  background: var(--yesHover);
+}
   </style>
 </head>
 
@@ -157,7 +174,7 @@
       />
     </section>
     <div id="nextStep" style="display:none; margin-top: 24px;">
-    <button id="nextBtn" class="primary-btn">Click me</button>
+    <button id="nextBtn" class="primary-btn">Next</button>
      </div>
   </main>
 
@@ -271,6 +288,7 @@
   </script>
 </body>
 </html>
+
 
 
 
