@@ -296,10 +296,33 @@
     nextBtn.addEventListener("click", () => {
       window.location.href = "dates.html";
     });
+/* ---------- CONFIRM DATE → FINAL PAGE ---------- */
+  const confirmBtn = document.getElementById("confirmBtn");
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener("click", () => {
+      const selectedDate = document.querySelector(".date.selected");
+
+      if (!selectedDate) {
+        alert("Please select a date first 💕");
+        return;
+      }
+
+      // Save selected date
+      localStorage.setItem(
+        "selectedDate",
+        selectedDate.dataset.date
+      );
+
+      // Navigate to final page
+      window.location.href = "see-you-soon.html";
+    });
+  }
   }
   </script>
 </body>
 </html>
+
 
 
 
