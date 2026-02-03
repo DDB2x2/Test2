@@ -118,5 +118,33 @@
 
     <button class="confirm-btn">Confirm</button>
   </main>
+<script>
+  <div class="date" data-date="Friday 16 Feb">Friday 16 Feb</div>
+  <div class="date" data-date="Saturday 17 Feb">Saturday 17 Feb</div>
+
+  <button id="confirmBtn">Confirm</button>
+/* ---------- CONFIRM DATE ---------- */
+const confirmBtn = document.getElementById("confirmBtn");
+
+confirmBtn.addEventListener("click", async () => {
+  const selectedDate = document.querySelector(".date.selected");
+
+  if (!selectedDate) {
+    alert("Please select a date first 💕");
+    return;
+  }
+
+  const chosenDate = selectedDate.dataset.date;
+
+  // Save locally
+  localStorage.setItem("selectedDate", chosenDate);
+
+  // Send to GitHub (Option C)
+  await sendDateToGitHub(chosenDate);
+
+  // Navigate to final page
+  window.location.href = "see-you-soon.html";
+});
+</script>
 </body>
 </html>
