@@ -289,9 +289,18 @@
       resizeConfettiCanvas();
       fullScreenConfetti();
     });  
+	  /* ---------- NEXT → NEW PAGE ---------- */
+  const nextBtn = document.getElementById("nextBtn");
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      window.location.href = "dates.html";
+    });
+  }
   </script>
 </body>
 </html>
+
 
 
 
