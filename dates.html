@@ -136,10 +136,10 @@ confirmBtn.addEventListener("click", async () => {
 
   const chosenDate = selectedDate.dataset.date;
 
-  // Send to GitHub (Option C)
+  /* ---------- DATE SEND TO GITHUB ---------- */
   await sendDateToGitHub(chosenDate);
 
-  // Navigate to final page
+  /* ---------- NAVIGATE TO FINAL COUNTDOWN ---------- */
   window.location.href = "see-you-soon.html";
 }
 });
