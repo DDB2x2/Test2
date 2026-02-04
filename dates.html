@@ -50,10 +50,11 @@
     font-weight: 600;
     margin: 2px 0 0;
     line-height: 1;
+    margin-bottom: 10px;
   }
     }
     
-    /* DATE OPTIONS */
+    /* FIGHTER OPTIONS */
     .options {
       display: grid;
       gap: 14px;
@@ -109,14 +110,14 @@
     <h1>Save The Date:</h1> <br>
     <h2> 1st & 2nd March</h2>
 
-    <form class="options">
+    <form class="fighters">
       <label>
-        <input type="radio" name="option1" />
+        <input type="radio" name="fighter" />
         <div class="option">Nature 🌿</div>
       </label>
 
       <label>
-        <input type="radio" name="option2" />
+        <input type="radio" name="fighter" />
         <div class="option">Beach 🌊</div>
       </label>
 
@@ -129,10 +130,10 @@
 
   confirmBtn.addEventListener("click", async () => {
     // 1. Get selected radio input
-    const selectedInput = document.querySelector('input[name="date"]:checked');
+    const selectedInput = document.querySelector('input[name="fighter"]:checked');
 
     if (!selectedInput) {
-      alert("Please select a date first 💕");
+      alert("Please choose your fighter first 💕");
       return;
     }
 
