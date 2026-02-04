@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pick a date 💘</title>
+  <title>Save the date 💘</title>
 
   <style>
     :root {
@@ -45,6 +45,13 @@
       margin-bottom: 24px;
     }
 
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 20px 0 0;
+      line-height: 1.3;
+    }
+    
     /* DATE OPTIONS */
     .options {
       display: grid;
@@ -97,7 +104,8 @@
   <main class="card">
     <div class="art">💘</div>
 
-    <h1>When are you free?</h1>
+    <h1>Save The Date:</h1> <br>
+    <h2> 1st - 2nd March</h2>
 
     <form class="options">
       <label>
@@ -110,10 +118,6 @@
         <div class="option">Sunday 1-Mar </div>
       </label>
 
-      <label>
-        <input type="radio" name="date" />
-        <div class="option">Monday 2-Mar </div>
-      </label>
     </form>
 
     <button class="confirm-btn" id="confirmBtn">Confirm</button>
