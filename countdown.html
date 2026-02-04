@@ -84,6 +84,14 @@
       opacity: .7;
     }
 
+    .date-label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.85;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+    
   </style>
 </head>
 
@@ -93,9 +101,11 @@
 
     <h1>…Didn’t you say we needed a new way to count down?</h1>
 
-    <div class="countdown" id="countdown">
-      Counting down to Thursday 19-Feb 💕
-    </div>
+    <div class="countdown">
+      <div class="date-label" id="dateLabel">Thursday 19-Feb</div>
+      <div class="days" id="timeRemaining"></div>
+  </div>
+
     
     <!-- HINT -->
     <div class="hint" id="hint">...but who's counting 😏</div>
