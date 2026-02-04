@@ -53,20 +53,6 @@
   opacity: 0.9;
   letter-spacing: 0.04em;
 }
-
-  .countdown {
-  margin-top: 40px;
-}
-
-  .countdown {
-  line-height: 1.6;
-}
-
-.countdown br {
-  content: "";
-  display: block;
-  margin-top: 6px;
-}
     
 .days {
   font-size: 22px;
@@ -114,14 +100,17 @@
 
   <script>
     const targetDate = new Date("February 19, 2026 00:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
+    const dateLabelEl = document.getElementById("dateLabel");
+    const timeRemainingEl = document.getElementById("timeRemaining");
 
     function updateCountdown() {
       const now = new Date().getTime();
       const diff = targetDate - now;
 
       if (diff <= 0) {
-        countdownEl.textContent = "It’s today! 💘";
+        dateLabelEl.textContent = "Thursday 19-Feb";
+        timeRemainingEl.textContent = "It’s today! 💘";
+
         return;
       }
 
@@ -133,8 +122,11 @@
         (diff % (1000 * 60 * 60)) / (1000 * 60)
       );
 
-      countdownEl.textContent =
-        `Thursday 19-Feb — ${days} days, ${hours} hours, ${minutes} minutes`;
+      dateLabelEl.textContent = "Thursday 19-Feb";
+
+      timeRemainingEl.textContent =
+      `${days} days · ${hours} hours · ${minutes} minutes`;
+
     }
 
     updateCountdown();
